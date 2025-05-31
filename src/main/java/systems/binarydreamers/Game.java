@@ -56,7 +56,7 @@ public class Game {
     private int score = 0;
 
     private int ammo = 10;
-    private int maxAmmo = 100000;
+    private int maxAmmo = 10;
     private float reloadTime = 2.0f;
     private float reloadTimer = 0f;
     private boolean reloading = false;
