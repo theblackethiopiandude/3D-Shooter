@@ -13,14 +13,12 @@ import java.nio.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.lwjgl.glfw.Callbacks.*;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.*;
-import static systems.binarydreamers.CubeUtils.drawCube;
 
 public class Game {
 
@@ -56,7 +54,7 @@ public class Game {
     private int score = 0;
 
     private int ammo = 10;
-    private int maxAmmo = 10;
+    private int maxAmmo = 100;
     private float reloadTime = 2.0f;
     private float reloadTimer = 0f;
     private boolean reloading = false;
@@ -86,7 +84,7 @@ public class Game {
     private List<PanEnemy> pans = new ArrayList<>();
     private final float PAN_HEIGHT = 1.0f;
 
-    private final float EASY_SPEED = 0.8f;
+    private final float EASY_SPEED = 5.8f;
     private final float MEDIUM_SPEED = 1.2f;
     private final float HARD_SPEED = 1.6f;
     private final float PRO_SPEED = 2.0f;
@@ -478,8 +476,8 @@ public class Game {
                 }
             }
 
-            drawWeaponModel();
             drawMuzzleFlash();
+            drawWeaponModel();
 
 //
 //            FloatBuffer lightPos = BufferUtils.createFloatBuffer(4);
